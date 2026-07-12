@@ -214,6 +214,11 @@
       display: flex; align-items: center; justify-content: center;
       position: relative; overflow: hidden;
     }
+    .card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .4s;
+    }
+    .card:hover .card-img img { transform: scale(1.05); }
     .card-badge {
       position: absolute; top: 16px; left: 16px;
       background: var(--ouro); color: var(--preto);
@@ -477,148 +482,131 @@
   <div class="imoveis-grid" id="gridImoveis">
 
     <div class="card reveal" data-tipo="casa">
-      <div class="card-img">
+      <div class="card-img" style="background: none; padding: 0;">
         <div class="card-badge">Destaque</div>
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="0.8">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Sobrado de Esquina" style="width:100%;height:100%;object-fit:cover;display:block;" />
       </div>
       <div class="card-body">
         <div class="card-tipo">Casa · Venda</div>
-        <div class="card-titulo">Residência Alto Padrão</div>
-        <div class="card-local">📍 Jardim Europa, São Paulo</div>
-        <div class="card-specs">
-          <div class="spec"><strong>4</strong>Quartos</div>
-          <div class="spec"><strong>3</strong>Banheiros</div>
-          <div class="spec"><strong>280m²</strong>Área</div>
-          <div class="spec"><strong>3</strong>Vagas</div>
-        </div>
-        <div class="card-preco">
-          <div class="preco">R$ 1.850.000</div>
-          <button class="ver-mais" onclick="mostrarContato('Residência Alto Padrão - Jardim Europa')">Consultar →</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card reveal" data-tipo="apto">
-      <div class="card-img">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="0.8">
-          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-tipo">Apartamento · Venda</div>
-        <div class="card-titulo">Cobertura Duplex</div>
-        <div class="card-local">📍 Moema, São Paulo</div>
+        <div class="card-titulo">Sobrado de Esquina</div>
+        <div class="card-local">📍 Centro, Monte Aprazível</div>
         <div class="card-specs">
           <div class="spec"><strong>3</strong>Quartos</div>
-          <div class="spec"><strong>4</strong>Banheiros</div>
-          <div class="spec"><strong>210m²</strong>Área</div>
-          <div class="spec"><strong>2</strong>Vagas</div>
+          <div class="spec"><strong>2</strong>Suítes</div>
+          <div class="spec"><strong>220m²</strong>Área</div>
+          <div class="spec"><strong>4</strong>Vagas</div>
         </div>
         <div class="card-preco">
-          <div class="preco">R$ 2.400.000</div>
-          <button class="ver-mais" onclick="mostrarContato('Cobertura Duplex - Moema')">Consultar →</button>
+          <div class="preco">R$ 890.000</div>
+          <button class="ver-mais" onclick="mostrarContato('Sobrado de Esquina - Centro')">Consultar →</button>
         </div>
       </div>
     </div>
 
     <div class="card reveal" data-tipo="casa">
-      <div class="card-img">
-        <div class="card-badge">Novo</div>
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="0.8">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
+      <div class="card-img" style="background: none; padding: 0;">
+        <div class="card-badge">Oportunidade</div>
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003dc80a0?w=600&q=80" alt="Casa Bairro São José" style="width:100%;height:100%;object-fit:cover;display:block;" />
       </div>
       <div class="card-body">
-        <div class="card-tipo">Casa · Aluguel</div>
-        <div class="card-titulo">Casa em Condomínio</div>
-        <div class="card-local">📍 Alphaville, Barueri</div>
+        <div class="card-tipo">Casa · Venda</div>
+        <div class="card-titulo">Casa Espaçosa com Churrasco</div>
+        <div class="card-local">📍 Bairro São José, Monte Aprazível</div>
         <div class="card-specs">
           <div class="spec"><strong>3</strong>Quartos</div>
-          <div class="spec"><strong>2</strong>Banheiros</div>
-          <div class="spec"><strong>160m²</strong>Área</div>
+          <div class="spec"><strong>1</strong>Banheiro</div>
+          <div class="spec"><strong>150m²</strong>Área</div>
           <div class="spec"><strong>2</strong>Vagas</div>
         </div>
         <div class="card-preco">
-          <div class="preco">R$ 5.800/mês</div>
-          <button class="ver-mais" onclick="mostrarContato('Casa em Condomínio - Alphaville')">Consultar →</button>
+          <div class="preco">R$ 250.000</div>
+          <button class="ver-mais" onclick="mostrarContato('Casa Espaçosa - Bairro São José')">Consultar →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" data-tipo="casa">
+      <div class="card-img" style="background: none; padding: 0;">
+        <div class="card-badge">Novo</div>
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Casa Campo Belo" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+      <div class="card-body">
+        <div class="card-tipo">Casa · Venda</div>
+        <div class="card-titulo">Casa Moderna Campo Belo</div>
+        <div class="card-local">📍 Bairro Campo Belo, Monte Aprazível</div>
+        <div class="card-specs">
+          <div class="spec"><strong>2</strong>Quartos</div>
+          <div class="spec"><strong>1</strong>Banheiro</div>
+          <div class="spec"><strong>110m²</strong>Área</div>
+          <div class="spec"><strong>1</strong>Vaga</div>
+        </div>
+        <div class="card-preco">
+          <div class="preco">R$ 180.000</div>
+          <button class="ver-mais" onclick="mostrarContato('Casa Moderna - Bairro Campo Belo')">Consultar →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" data-tipo="casa">
+      <div class="card-img" style="background: none; padding: 0;">
+        <img src="https://images.unsplash.com/photo-1605276373954-0240a0f8c8b4?w=600&q=80" alt="Casa com Piscina" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+      <div class="card-body">
+        <div class="card-tipo">Casa · Venda</div>
+        <div class="card-titulo">Casa com Piscina</div>
+        <div class="card-local">📍 Jardim das Flores, Monte Aprazível</div>
+        <div class="card-specs">
+          <div class="spec"><strong>4</strong>Quartos</div>
+          <div class="spec"><strong>2</strong>Banheiros</div>
+          <div class="spec"><strong>260m²</strong>Área</div>
+          <div class="spec"><strong>3</strong>Vagas</div>
+        </div>
+        <div class="card-preco">
+          <div class="preco">R$ 480.000</div>
+          <button class="ver-mais" onclick="mostrarContato('Casa com Piscina - Jardim das Flores')">Consultar →</button>
         </div>
       </div>
     </div>
 
     <div class="card reveal" data-tipo="apto">
-      <div class="card-img">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="0.8">
-          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-        </svg>
+      <div class="card-img" style="background: none; padding: 0;">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80" alt="Apartamento Centro" style="width:100%;height:100%;object-fit:cover;display:block;" />
       </div>
       <div class="card-body">
-        <div class="card-tipo">Apartamento · Aluguel</div>
-        <div class="card-titulo">Studio Moderno</div>
-        <div class="card-local">📍 Vila Madalena, São Paulo</div>
+        <div class="card-tipo">Apartamento · Venda</div>
+        <div class="card-titulo">Apartamento no Centro</div>
+        <div class="card-local">📍 Centro, Monte Aprazível</div>
         <div class="card-specs">
-          <div class="spec"><strong>1</strong>Quarto</div>
+          <div class="spec"><strong>2</strong>Quartos</div>
           <div class="spec"><strong>1</strong>Banheiro</div>
-          <div class="spec"><strong>42m²</strong>Área</div>
+          <div class="spec"><strong>75m²</strong>Área</div>
           <div class="spec"><strong>1</strong>Vaga</div>
         </div>
         <div class="card-preco">
-          <div class="preco">R$ 2.900/mês</div>
-          <button class="ver-mais" onclick="mostrarContato('Studio Moderno - Vila Madalena')">Consultar →</button>
+          <div class="preco">R$ 160.000</div>
+          <button class="ver-mais" onclick="mostrarContato('Apartamento Centro - Monte Aprazível')">Consultar →</button>
         </div>
       </div>
     </div>
 
     <div class="card reveal" data-tipo="comercial">
-      <div class="card-img">
+      <div class="card-img" style="background: none; padding: 0;">
         <div class="card-badge">Oportunidade</div>
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="0.8">
-          <rect x="2" y="7" width="20" height="14" rx="1"/>
-          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Sala Comercial" style="width:100%;height:100%;object-fit:cover;display:block;" />
       </div>
       <div class="card-body">
         <div class="card-tipo">Sala Comercial · Venda</div>
-        <div class="card-titulo">Conjunto Comercial</div>
-        <div class="card-local">📍 Paulista, São Paulo</div>
+        <div class="card-titulo">Ponto Comercial Central</div>
+        <div class="card-local">📍 Centro, Monte Aprazível</div>
         <div class="card-specs">
-          <div class="spec"><strong>—</strong>Quarto</div>
-          <div class="spec"><strong>2</strong>Banheiros</div>
-          <div class="spec"><strong>85m²</strong>Área</div>
+          <div class="spec"><strong>—</strong>Quartos</div>
+          <div class="spec"><strong>1</strong>Banheiro</div>
+          <div class="spec"><strong>60m²</strong>Área</div>
           <div class="spec"><strong>2</strong>Vagas</div>
         </div>
         <div class="card-preco">
-          <div class="preco">R$ 720.000</div>
-          <button class="ver-mais" onclick="mostrarContato('Conjunto Comercial - Paulista')">Consultar →</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card reveal" data-tipo="casa">
-      <div class="card-img">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="0.8">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-tipo">Casa · Venda</div>
-        <div class="card-titulo">Sobrado Reformado</div>
-        <div class="card-local">📍 Tatuapé, São Paulo</div>
-        <div class="card-specs">
-          <div class="spec"><strong>3</strong>Quartos</div>
-          <div class="spec"><strong>2</strong>Banheiros</div>
-          <div class="spec"><strong>130m²</strong>Área</div>
-          <div class="spec"><strong>2</strong>Vagas</div>
-        </div>
-        <div class="card-preco">
-          <div class="preco">R$ 890.000</div>
-          <button class="ver-mais" onclick="mostrarContato('Sobrado Reformado - Tatuapé')">Consultar →</button>
+          <div class="preco">R$ 220.000</div>
+          <button class="ver-mais" onclick="mostrarContato('Ponto Comercial - Centro')">Consultar →</button>
         </div>
       </div>
     </div>
